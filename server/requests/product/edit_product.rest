@@ -1,0 +1,12 @@
+PUT http://localhost:3004/api/products/63633123fa1e265a678cf83f
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYzNjEwNmNhYWVhMTZhYTAzMWZmYzAxMiIsImlhdCI6MTY2NzQ0MzUxNywiZXhwIjoxNjY3NDQ3MTE3fQ.2C6513O0uj70eEUdygwLD5kuol74JCIf0dCWruf7Jdo
+
+{
+"name": "Bush Furniture Salinas Cape Cod Grey 6-cube Organizer",
+"description":
+    "Make organization a charming task with the serene, sophisticated lines and subdued, stormy color of this cube organizer.",
+"price": 148.5,
+"imagePath":
+    "https://ak1.ostkcdn.com/images/products/is/images/direct/54ce209df375b81b1cdc594f405a6520fbaf139e/The-Gray-Barn-Lowbridge-Cape-Cod-Grey-6-cube-Organizer.jpg?impolicy=medium"
+}
