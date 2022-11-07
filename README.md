@@ -6,7 +6,7 @@ Mysterious online store selling unique items ranging from homemade chocolate bar
 
 ## Description
 
-Simple online store created with the MERN stack, Tailwind CSS, and 🌼[daisyUI](https://daisyui.com/). At the moment, only the administrator can sell products, and multiple clients can purchase multiple products. You can use the cart without creating an account, but you must create one to order. There are no stock restrictions. There is also no API for creating admin accounts. You can create the admin account by first creating a user and then changing the 'isAdmin' field in the database to 'true.'
+Simple online store created with the MERN stack, Tailwind CSS, and 🌼[daisyUI](https://daisyui.com/). At the moment, only the administrator can sell products, and multiple clients can purchase multiple products. You can use the cart without creating an account, but you must create one to order. There are no stock restrictions. There is also no API for creating admin accounts. You can create the admin account by first creating a user and then changing the 'isAdmin' field in the database to 'true'.
 
 ## Demo
 
@@ -23,7 +23,7 @@ $ git clone https://github.com/khinekyaw/mern-shop.git
 2. install backend packages
 
 ```
-$ cd project
+$ cd mern-shop
 $ yarn install
 ```
 
@@ -41,7 +41,7 @@ $ yarn install
 Create `.env` file that include:
 
 ```env eg
-MONGO_URI = 'mongodb_uri'
+MONGODB_URI = 'mongodb_uri'
 SECRET = 'secret'
 PORT = 5000
 ```
