@@ -1,17 +1,12 @@
 import { useEffect, useState } from 'react'
 
 import Products from '../components/Products'
-// import { initialProduct } from '../data'
 import productService from '../services/products'
+import LoadingButton from '../components/LoadingButton'
 
 const Home = () => {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(false)
-
-  useEffect(() => {
-    loadProduct()
-    // setProducts(initialProduct)
-  }, [])
 
   const loadProduct = async () => {
     setLoading(true)
@@ -25,43 +20,18 @@ const Home = () => {
     }
   }
 
-  let loadBtnEl = (
-    <button
-      className="btn btn-primary btn-outline tooltip"
-      data-tip="coming soon😎"
-      onClick={loadProduct}
-    >
-      Load More
-    </button>
-  )
-
-  if (loading) {
-    loadBtnEl = (
-      <button
-        className="btn btn-primary btn-outline loading"
-        onClick={loadProduct}
-      >
-        Loading
-      </button>
-    )
-  }
-  if (loading && !products.length) {
-    loadBtnEl = (
-      <div className="flex flex-1 items-center justify-center">
-        <button
-          className="btn btn-primary btn-outline loading"
-          onClick={loadProduct}
-        >
-          Loading
-        </button>
-      </div>
-    )
-  }
+  useEffect(() => {
+    loadProduct()
+  }, [])
 
   return (
     <div className="flex flex-col flex-1 items-center p-4 md:py-8 md:px-12">
       <Products data={products} />
-      {loadBtnEl}
+      <LoadingButton
+        loading={loading}
+        screen={!products.length}
+        onClick={loadProduct}
+      />
     </div>
   )
 }
