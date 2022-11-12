@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 
 import orderService from '../../services/orders'
+import Badge from '../Badge'
 
 const AdminOrder = ({ id, product, quantity }) => {
   return (
     <div className="flex justify-between p-2 rounded-sm border-b">
-      <div>{product.name}</div>
-      <div>× {quantity}</div>
-      <div className="font-bold">{product.price}</div>
+      <div className="flex-1">{product.name}</div>
+      <div className="font-bold">
+        ${product.price} × {quantity}
+      </div>
     </div>
   )
 }
@@ -31,8 +33,6 @@ const OrdersTab = () => {
     getInitialData()
   }, [user])
 
-  //   console.log(orders)
-
   const orderEl = orders.length
     ? orders.map(({ id, user, products, amount, address, phone, status }) => {
         return (
@@ -40,7 +40,7 @@ const OrdersTab = () => {
             <div className="collapse border border-base-300 bg-base-100 rounded-box mb-3">
               <input type="checkbox" />
               <div className="collapse-title flex flex-col md:flex-row justify-between items-center">
-                <div className="badge">{status}</div>
+                <Badge status={status} />
                 <p>
                   <span className="font-bold">
                     {user.name}({user.username})
@@ -51,7 +51,7 @@ const OrdersTab = () => {
                 <p>
                   total:{' '}
                   <span className="text-primary font-bold">
-                    {amount.toFixed(2)}
+                    ${amount.toFixed(2)}
                   </span>
                 </p>
               </div>

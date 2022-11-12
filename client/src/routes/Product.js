@@ -17,13 +17,14 @@ const Product = () => {
   }
 
   return (
-    <div className="flex flex-col flex-1 px-8 items-center mb-8">
+    <div className="flex flex-col flex-1 items-center mb-8">
       <Breadcrumb />
-      <div className="flex md:w-[760px] flex-col items-center md:flex-row md:items-start">
+
+      <div className="flex md:w-[890px] flex-col items-center md:flex-row md:items-start">
         <img
           src={imagePath}
           alt={name}
-          className="bg-base-200 w-80 h-80 mr-0 md:mr-12 rounded-xl object-cover mb-6 shadow-xl"
+          className="bg-base-200 w-96 h-96 mr-0 md:mr-14 rounded-xl object-cover mb-6 shadow-xl"
         />
         <div className="flex flex-1 flex-col items-start">
           <p className="mb-4 text-xl">{name}</p>

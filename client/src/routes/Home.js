@@ -25,7 +25,7 @@ const Home = () => {
   }, [])
 
   return (
-    <div className="flex flex-col flex-1 items-center p-4 md:py-8 md:px-12">
+    <div className="flex flex-col flex-1 items-center my-8">
       <Products data={products} />
       <LoadingButton
         loading={loading}

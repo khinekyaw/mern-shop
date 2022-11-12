@@ -19,7 +19,7 @@ const Checkout = ({ onOrder }) => {
   }
 
   return (
-    <div className="w-96 h-fit card shadow-lg">
+    <div className="w-[480px] h-fit card shadow-lg">
       <form className="card-body" onSubmit={handleOrder}>
         <div className="card-title">
           <h2 className="mb-4">Checkout</h2>
@@ -33,7 +33,7 @@ const Checkout = ({ onOrder }) => {
         </div>
         <div className="divider"></div>
         <p>Payment Method</p>
-        <select className="select select-bordered w-full max-w-xs mb-3">
+        <select className="select select-bordered mb-3">
           <option>Cash on Delivery</option>
           <option disabled>Coming Soon</option>
         </select>

@@ -20,7 +20,7 @@ const Admin = () => {
   }
 
   return (
-    <div className="m-4 md:my-8 md:mx-12">
+    <div className="w-full my-8">
       <h1 className="text-2xl mb-6">Admin</h1>
       <div className="tabs mb-6">
         {tabs.map((t, index) => {

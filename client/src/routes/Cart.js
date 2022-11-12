@@ -41,7 +41,7 @@ const Cart = () => {
   }
 
   const emptyCartEl = (
-    <div className="flex flex-col items-center my-32">
+    <div className="flex flex-1 flex-col items-center my-32">
       <h2 className="mb-6">Your cart is empty (as my wallet😂) </h2>
       <Link to="/" className="btn btn-outline">
         Go To Shop
@@ -50,7 +50,7 @@ const Cart = () => {
   )
 
   const cartItemEl = (
-    <div className="flex flex-col md:flex-row w-[980px] items-center md:items-start">
+    <div className="flex flex-1 flex-col md:flex-row items-center md:items-start my-8">
       <div className="flex-1 mb-8 mx-2 md:mr-14">
         <h2 className="text-2xl mb-8">Shopping Cart</h2>
         <CartProducts data={cartItems} />
@@ -60,7 +60,7 @@ const Cart = () => {
   )
 
   const cartEl = orderState ? (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-1 flex-col justify-center items-center">
       <BsCheckCircle className="text-success text-6xl mb-6" />
       <h1 className="text-4xl mb-4 text-center">Thank for your purchase</h1>
       <p className="mb-6 text-center">Your order number is : {orderState.id}</p>
@@ -74,7 +74,7 @@ const Cart = () => {
     emptyCartEl
   )
 
-  return <div className="flex flex-1 m-8 justify-center">{cartEl}</div>
+  return cartEl
 }
 
 export default Cart

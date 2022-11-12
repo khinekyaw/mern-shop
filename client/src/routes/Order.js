@@ -28,7 +28,7 @@ const Order = () => {
   }, [loadOrders])
 
   const orderEl = orders.length ? (
-    <div className="flex flex-col flex-1">
+    <div className="flex flex-col w-full">
       <h1 className="text-2xl">Your Orders</h1>
       {orders.map(({ id, products, createdAt, status }) => {
         const createdDate = new Date(createdAt)
@@ -36,7 +36,9 @@ const Order = () => {
           <div key={id}>
             <div className="divider my-6">{createdDate.toLocaleString()}</div>
             <div className="bg-base-200 p-4 md:py-6 md:px-8 rounded-box">
-              <Badge status={status} />
+              <div className="mb-4">
+                <Badge status={status} />
+              </div>
               {products.map(p => {
                 return (
                   <OrderProduct
@@ -54,7 +56,7 @@ const Order = () => {
   ) : null
 
   return (
-    <div className="flex flex-col flex-1 p-4 max-w-[860px] w-full self-center justify-center items-center">
+    <div className="flex flex-col flex-1 self-center justify-center items-center my-8">
       {orderEl}
       {loading ? (
         <button className="btn btn-primary btn-outline loading">LOADING</button>

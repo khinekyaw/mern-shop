@@ -7,7 +7,9 @@ const Root = () => {
   return (
     <Layout>
       <Navbar />
-      <Outlet />
+      <div className="mx-auto flex flex-1 max-w-screen-xl w-full px-4 sm:px-6 lg:px-8">
+        <Outlet />
+      </div>
       <Footer />
     </Layout>
   )

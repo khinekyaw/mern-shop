@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Badge = ({ status }) => {
-  const className = ['badge', 'mb-4']
+  const className = ['badge']
   if (status === 'pending') className.push('badge-warning')
   else if (status === 'delivered') className.push('badge-success')
   else if (status === 'cancelled') className.push('badge-error')

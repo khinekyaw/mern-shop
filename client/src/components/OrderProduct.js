@@ -6,7 +6,7 @@ const OrderProduct = ({ product, quantity }) => {
 
   return (
     <div className="card card-side card-compact bg-base-100 border border-base-300 mb-6">
-      <Link to={detailURL} className="h-32 w-32 md:h-40 md:w-40">
+      <Link to={detailURL} className="h-32 w-32">
         <img
           src={imagePath}
           alt={name}
